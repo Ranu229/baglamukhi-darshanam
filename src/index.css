@@ -2000,8 +2000,10 @@ body {
 
 /* ── Responsive Rules ── */
 @media (max-width: 1024px) {
-  .hero { grid-template-columns: 1fr; padding: 60px 32px; }
-  .hero-visual { display: none; }
+  .hero { grid-template-columns: 1fr; padding: 60px 32px; text-align: center; }
+  .hero-visual { display: flex; justify-content: center; margin-top: 36px; width: 100%; }
+  .hero-btns { justify-content: center; }
+  .trust-row { justify-content: center; }
   .services-grid { grid-template-columns: 1fr; }
   .about-section { grid-template-columns: 1fr; padding: 64px 32px; }
   .pooja-grid { grid-template-columns: 1fr; }
