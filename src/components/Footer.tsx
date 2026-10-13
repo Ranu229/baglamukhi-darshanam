@@ -40,7 +40,7 @@ const Footer: React.FC<FooterProps> = ({ onOpenEnquiry }) => {
               onClick={() => onOpenEnquiry()}
               className="btn-primary"
             >
-              📋 Enquire Now
+              📋 Book / Enquiry
             </button>
           </div>
         </div>

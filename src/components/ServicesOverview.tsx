@@ -29,7 +29,7 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ onOpenEnquiry }) =>
               onClick={() => onOpenEnquiry('baglamukhi-pooja')}
               className="btn-card-action"
             >
-              Enquire for Pooja →
+              Pooja Enquiry →
             </button>
           </div>
         </div>
@@ -46,7 +46,7 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ onOpenEnquiry }) =>
               onClick={() => onOpenEnquiry('comfortable-guesthouses')}
               className="btn-card-action"
             >
-              Book Stay Assistance →
+              Stay Enquiry →
             </button>
           </div>
         </div>
@@ -63,7 +63,7 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ onOpenEnquiry }) =>
               onClick={() => onOpenEnquiry('travel-taxi-pickup')}
               className="btn-card-action"
             >
-              Plan Travel Route →
+              Travel Enquiry →
             </button>
           </div>
         </div>

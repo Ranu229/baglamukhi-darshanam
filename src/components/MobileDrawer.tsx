@@ -54,7 +54,7 @@ const MobileDrawer: React.FC<MobileDrawerProps> = ({ isOpen, onClose, onOpenEnqu
               onOpenEnquiry();
             }}
           >
-            📋 Book / Enquire Now
+            📋 Book / Pilgrimage Enquiry
           </button>
 
           <div className="mobile-drawer-contact-row">

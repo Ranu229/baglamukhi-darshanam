@@ -12,11 +12,11 @@ const FloatingContact: React.FC<FloatingContactProps> = ({ onOpenEnquiry }) => {
         type="button"
         onClick={onOpenEnquiry}
         className="floating-btn enquiry"
-        title="Quick Enquiry Form"
+        title="Quick Pilgrimage Enquiry"
         aria-label="Open pilgrimage enquiry form"
       >
         <span className="floating-icon">📋</span>
-        <span className="floating-label">Enquire</span>
+        <span className="floating-label">Enquiry</span>
       </button>
 
       <a

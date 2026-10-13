@@ -67,9 +67,9 @@ const Navbar: React.FC<NavbarProps> = ({ onOpenMobileMenu, onOpenEnquiry }) => {
         <button
           type="button"
           onClick={() => onOpenEnquiry()}
-          className="btn-enquire-nav"
+          className="btn-enquiry-nav"
         >
-          Book / Enquire
+          Book / Enquiry
         </button>
         <a
           href={SITE_CONFIG.getWhatsappUrl()}

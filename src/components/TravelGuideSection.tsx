@@ -71,7 +71,7 @@ const TravelGuideSection: React.FC<TravelGuideSectionProps> = ({ onOpenEnquiry }
             rel="noopener noreferrer"
             className="btn-outline"
           >
-            💬 Enquire Taxi on WhatsApp
+            💬 WhatsApp Taxi Enquiry
           </a>
         </div>
       </div>

@@ -51,14 +51,14 @@ const PoojaRitualsSection: React.FC<PoojaRitualsSectionProps> = ({ onOpenEnquiry
                   onClick={() => onOpenEnquiry(service.id)}
                   className="btn-primary flex-1 text-center"
                 >
-                  Book / Enquire
+                  Book / Enquiry
                 </button>
                 <a
-                  href={SITE_CONFIG.getWhatsappUrl(`Jai Maa Baglamukhi! I would like to book or enquire about ${service.title} at Nalkheda.`)}
+                  href={SITE_CONFIG.getWhatsappUrl(`Jai Maa Baglamukhi! I would like to book or send an enquiry about ${service.title} at Nalkheda.`)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-wa-icon"
-                  title="Enquire on WhatsApp"
+                  title="WhatsApp Enquiry"
                 >
                   💬
                 </a>

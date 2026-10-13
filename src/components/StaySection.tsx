@@ -42,14 +42,14 @@ const StaySection: React.FC<StaySectionProps> = ({ onOpenEnquiry }) => {
                   onClick={() => onOpenEnquiry(stay.id)}
                   className="btn-primary flex-1 text-center"
                 >
-                  Book / Enquire Room
+                  Book / Room Enquiry
                 </button>
                 <a
-                  href={SITE_CONFIG.getWhatsappUrl(`Jai Maa Baglamukhi! I would like to enquire about ${stay.title} near the temple.`)}
+                  href={SITE_CONFIG.getWhatsappUrl(`Jai Maa Baglamukhi! I would like to send an enquiry about ${stay.title} near the temple.`)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-wa-icon"
-                  title="WhatsApp Booking"
+                  title="WhatsApp Stay Enquiry"
                 >
                   💬
                 </a>

@@ -1035,6 +1035,15 @@ body {
   font-size: 0.8rem; color: rgba(255,248,231,0.5);
   margin-bottom: 10px;
 }
+.footer-contact-item a {
+  color: rgba(255, 248, 231, 0.75);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-contact-item a:hover {
+  color: var(--gold-light);
+  text-decoration: underline;
+}
 .footer-contact-item span:first-child { color: var(--gold); flex-shrink: 0; }
 
 .footer-bottom {
@@ -1063,6 +1072,7 @@ body {
   align-items: center;
   gap: 12px;
 }
+.btn-enquiry-nav,
 .btn-enquire-nav {
   background: var(--saffron);
   color: #fff;
@@ -1076,6 +1086,7 @@ body {
   transition: all 0.2s;
   font-family: 'Jost', sans-serif;
 }
+.btn-enquiry-nav:hover,
 .btn-enquire-nav:hover {
   background: var(--crimson);
   transform: translateY(-1px);
@@ -2000,81 +2011,466 @@ body {
 
 /* ── Responsive Rules ── */
 @media (max-width: 1024px) {
-  .hero { grid-template-columns: 1fr; padding: 60px 32px; text-align: center; }
-  .hero-visual { display: flex; justify-content: center; margin-top: 36px; width: 100%; }
-  .hero-btns { justify-content: center; }
-  .trust-row { justify-content: center; }
-  .services-grid { grid-template-columns: 1fr; }
-  .about-section { grid-template-columns: 1fr; padding: 64px 32px; }
-  .pooja-grid { grid-template-columns: 1fr; }
-  .timings-container { grid-template-columns: 1fr; }
-  .travel-routes-grid { grid-template-columns: repeat(2, 1fr); }
-  .travel-hubs-list { grid-template-columns: 1fr; }
-  .why-grid { grid-template-columns: repeat(2, 1fr); }
-  .stay-grid { grid-template-columns: 1fr; }
-  .testimonials-grid { grid-template-columns: 1fr; }
-  .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
-  .services-section, .pooja-section, .timings-section, .travel-section, .why-section, .mid-cta, .stay-section, .testimonials-section, .faq-section {
+  .hero {
+    grid-template-columns: 1fr;
     padding: 64px 32px;
+    text-align: center;
   }
-  .cta-strip { flex-direction: column; text-align: center; padding: 40px 24px; }
-  .footer { padding: 48px 32px 24px; }
-  .nav-links { display: none; }
-  .navbar { padding: 0 24px; }
-  .hamburger-btn { display: flex; }
-}
-
-@media (max-width: 768px) {
-  .announce-bar {
-    padding: 7px 14px;
+  .hero-visual {
+    display: flex;
+    justify-content: center;
+    margin-top: 36px;
+    width: 100%;
   }
-  .announce-text {
-    font-size: 0.68rem;
+  .hero-btns {
+    justify-content: center;
   }
-  .announce-btn-label {
-    display: none;
+  .trust-row {
+    justify-content: center;
   }
-  .announce-btn {
-    padding: 4px 8px;
+  .services-grid {
+    grid-template-columns: 1fr;
   }
-  .btn-enquire-nav {
-    display: none;
+  .about-section {
+    grid-template-columns: 1fr;
+    padding: 64px 32px;
+    text-align: center;
+  }
+  .about-img-wrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 28px;
+  }
+  .about-content .ornament-divider {
+    justify-content: center !important;
+  }
+  .about-features {
+    text-align: left;
+  }
+  .pooja-grid {
+    grid-template-columns: 1fr;
+  }
+  .timings-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
   .travel-routes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .travel-hubs-list {
     grid-template-columns: 1fr;
   }
   .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .stay-grid {
     grid-template-columns: 1fr;
+  }
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+  .services-section,
+  .pooja-section,
+  .timings-section,
+  .travel-section,
+  .why-section,
+  .mid-cta,
+  .stay-section,
+  .testimonials-section,
+  .faq-section {
+    padding: 64px 32px;
+  }
+  .cta-strip {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 24px;
+    gap: 20px;
+  }
+  .cta-strip-btns {
+    justify-content: center;
+  }
+  .footer {
+    padding: 56px 32px 28px;
+  }
+  .nav-links {
+    display: none;
+  }
+  .navbar {
+    padding: 0 24px;
+  }
+  .hamburger-btn {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Announcement Bar */
+  .announce-bar {
+    padding: 8px 16px;
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+  .announce-text {
+    font-size: 0.72rem;
+    line-height: 1.4;
+    text-align: center;
+    justify-content: center;
+  }
+  .announce-actions {
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+  }
+  .announce-btn {
+    padding: 5px 14px;
+    font-size: 0.75rem;
+  }
+  .announce-btn-label {
+    display: inline;
+  }
+
+  /* Navbar */
+  .navbar {
+    padding: 0 16px;
+    height: 64px;
+  }
+  .logo {
+    min-width: 0;
+    max-width: calc(100% - 48px);
+  }
+  .logo-text-wrap {
+    min-width: 0;
+  }
+  .logo-main {
+    font-size: clamp(1.05rem, 4.2vw, 1.2rem);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .logo-sub {
+    font-size: 0.62rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .btn-enquiry-nav,
+  .btn-enquire-nav,
+  .btn-wa-nav {
+    display: none;
+  }
+
+  /* Hero Section */
+  .hero {
+    padding: 40px 18px 48px;
+    text-align: center;
+  }
+  .hero-badge {
+    margin: 0 auto 14px;
+    font-size: 0.72rem;
+  }
+  .hero h1 {
+    font-size: clamp(1.85rem, 6.8vw, 2.3rem);
+    line-height: 1.25;
+    text-align: center;
+    margin-bottom: 14px;
+  }
+  .hero h1 br {
+    display: none;
+  }
+  .hero-sub {
+    font-size: 0.88rem;
+    line-height: 1.65;
+    text-align: center;
+    max-width: 480px;
+    margin: 0 auto 24px;
+  }
+  .hero-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto 28px;
+  }
+  .hero-btns .btn-primary,
+  .hero-btns .btn-outline,
+  .hero-btns .btn-wa-pill {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    padding: 13px 20px;
+  }
+  .trust-row {
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+  .trust-item {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  .hero-temple-card {
+    max-width: 100%;
+    width: 100%;
+    padding: 24px 16px;
+  }
+  .temple-svg {
+    max-width: 250px;
+  }
+
+  /* Sections */
+  .services-section,
+  .about-section,
+  .pooja-section,
+  .timings-section,
+  .travel-section,
+  .stay-section,
+  .why-section,
+  .testimonials-section,
+  .faq-section {
+    padding: 48px 18px;
+  }
+  .section-header {
+    margin-bottom: 28px;
+    text-align: center;
+  }
+  .section-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    padding: 4px 14px;
+    background: rgba(201, 168, 76, 0.1);
+    border: 1px solid rgba(201, 168, 76, 0.25);
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+  .section-label::before {
+    display: none;
+  }
+  .section-heading {
+    font-size: clamp(1.65rem, 6vw, 2.1rem);
+    line-height: 1.25;
+    text-align: center;
+  }
+  .ornament-divider {
+    margin: 10px auto;
+  }
+  .section-sub {
+    font-size: 0.85rem;
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  /* Cards */
+  .service-card,
+  .pooja-card,
+  .stay-card,
+  .travel-card,
+  .testimonial-card,
+  .why-card {
+    padding: 22px 18px;
+    border-radius: 12px;
+  }
+
+  /* Timings */
+  .timings-table-card,
+  .offerings-card {
+    padding: 22px 16px;
+  }
+  .table-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 18px;
   }
   .timing-row {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 6px;
+    padding: 12px 14px;
   }
+
+  /* Travel */
+  .travel-routes-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .travel-hubs-container {
+    padding: 22px 16px;
+  }
+  .travel-hubs-cta {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+  .travel-hubs-cta button,
+  .travel-hubs-cta a {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Why Us */
+  .why-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* CTA Banners */
+  .cta-strip-btns,
+  .mid-cta-btns {
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    gap: 10px;
+  }
+  .cta-strip-btns a,
+  .mid-cta-btns a {
+    width: 100%;
+    text-align: center;
+  }
+  .mid-cta-banner {
+    padding: 32px 18px;
+  }
+
+  /* Modal Form */
   .form-row {
     flex-direction: column;
     gap: 12px;
   }
+  .modal-box {
+    padding: 24px 18px;
+  }
+
+  /* Footer on Mobile */
+  .footer {
+    padding: 48px 18px 28px;
+  }
+  .footer-ornament {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 28px;
+    overflow: hidden;
+  }
+  .footer-ornament svg {
+    max-width: 100%;
+    height: auto;
+  }
   .footer-grid {
     grid-template-columns: 1fr;
-    gap: 28px;
+    gap: 32px;
+  }
+  .footer-brand {
+    text-align: left;
+  }
+  .footer-brand .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .footer-brand p,
+  .footer-desc {
+    max-width: 100%;
+    font-size: 0.85rem;
+    line-height: 1.65;
+    margin-top: 12px;
+  }
+  .footer-actions {
+    margin-top: 16px;
+  }
+  .footer-actions .btn-primary {
+    width: 100%;
+    max-width: 260px;
+    justify-content: center;
+    text-align: center;
+  }
+  .footer-col h4 {
+    font-size: 1.05rem;
+    margin-bottom: 14px;
+    border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+    padding-bottom: 8px;
+  }
+  .footer-col ul {
+    gap: 10px;
+  }
+  .footer-col ul li a,
+  .footer-link-btn {
+    font-size: 0.86rem;
+    padding: 4px 0;
+    display: inline-block;
+  }
+  .footer-contact-item {
+    font-size: 0.84rem;
+    line-height: 1.5;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .footer-contact-item a {
+    color: rgba(255, 248, 231, 0.75);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .footer-contact-item a:hover {
+    color: var(--gold-light);
+    text-decoration: underline;
   }
   .footer-bottom {
     flex-direction: column;
     text-align: center;
+    gap: 12px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .footer-bottom p {
+    text-align: center;
+    font-size: 0.75rem;
+    line-height: 1.5;
   }
   .footer-mantra {
     text-align: center;
+    font-size: 0.78rem;
+    line-height: 1.6;
+    max-width: 95%;
+    margin: 0 auto;
+    word-break: break-word;
   }
 }
 
 @media (max-width: 480px) {
-  .hero { padding: 40px 18px; }
-  .hero h1 { font-size: 2rem; }
-  .hero-btns { flex-direction: column; }
-  .services-section, .pooja-section, .timings-section, .travel-section, .why-section, .stay-section, .testimonials-section, .faq-section {
-    padding: 48px 18px;
+  .hero {
+    padding: 32px 14px 40px;
   }
-  .modal-box { padding: 22px 18px; }
-  .floating-label { display: none; }
-  .floating-btn { padding: 10px; border-radius: 50%; }
+  .services-section,
+  .about-section,
+  .pooja-section,
+  .timings-section,
+  .travel-section,
+  .stay-section,
+  .why-section,
+  .testimonials-section,
+  .faq-section {
+    padding: 38px 14px;
+  }
+  .footer {
+    padding: 40px 14px 24px;
+  }
+  .modal-box {
+    padding: 20px 14px;
+  }
+  .floating-contact-container {
+    bottom: 16px;
+    right: 12px;
+    gap: 8px;
+  }
+  .floating-btn {
+    padding: 9px 14px;
+    font-size: 0.78rem;
+  }
 }

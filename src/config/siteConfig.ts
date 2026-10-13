@@ -10,7 +10,7 @@ export const SITE_CONFIG = {
   timings: '5:00 AM – 9:00 PM (Daily)',
   email: 'info@baglamukhidarshanam.com',
   getWhatsappUrl: (customMessage?: string) => {
-    const defaultMsg = 'Jai Maa Baglamukhi! I would like to enquire about pilgrimage assistance for visiting Nalkheda Dham.';
+    const defaultMsg = 'Jai Maa Baglamukhi! I would like to make an enquiry about pilgrimage assistance for visiting Nalkheda Dham.';
     const text = encodeURIComponent(customMessage || defaultMsg);
     return `https://wa.me/919999999999?text=${text}`;
   },

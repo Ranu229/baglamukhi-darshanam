@@ -45,7 +45,7 @@ const EnquiryModal: React.FC<EnquiryModalProps> = ({ isOpen, initialServiceId, o
 
     const messageLines = [
       '🙏 *Jai Maa Baglamukhi!*',
-      'I would like to enquire about pilgrimage assistance for visiting Nalkheda Dham.',
+      'I would like to make an enquiry about pilgrimage assistance for visiting Nalkheda Dham.',
       '',
       `👤 *Name:* ${formData.fullName || 'Not specified'}`,
       `📞 *Phone:* ${formData.phone || 'Not specified'}`,
@@ -71,7 +71,7 @@ const EnquiryModal: React.FC<EnquiryModalProps> = ({ isOpen, initialServiceId, o
         <div className="modal-header">
           <div>
             <span className="modal-badge">🙏 Nalkheda Pilgrimage Help</span>
-            <h3 id="modal-title">Book or Enquire Assistance</h3>
+            <h3 id="modal-title">Pilgrimage Booking & Enquiry</h3>
           </div>
           <button type="button" className="modal-close-btn" onClick={onClose} aria-label="Close modal">
             ✕
