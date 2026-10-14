@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { SITE_CONFIG } from '../config/siteConfig';
 import { POOJA_SERVICES, STAY_OPTIONS } from '../data/servicesData';
 import type { EnquiryFormData } from '../types';
@@ -26,6 +26,17 @@ const EnquiryModal: React.FC<EnquiryModalProps> = ({ isOpen, initialServiceId, o
     notes: '',
   });
   const [prevInitialId, setPrevInitialId] = useState(initialServiceId);
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        onClose();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, onClose]);
 
   if (initialServiceId !== prevInitialId) {
     setPrevInitialId(initialServiceId);

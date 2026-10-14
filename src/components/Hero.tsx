@@ -44,15 +44,9 @@ const Hero: React.FC<HeroProps> = ({ onOpenEnquiry }) => {
         </div>
 
         <div className="trust-row">
-          <span className="trust-item">
-            <span className="trust-dot">✓</span> Trusted Local Assistance
-          </span>
-          <span className="trust-item">
-            <span className="trust-dot">✓</span> Verified Vedic Pandits
-          </span>
-          <span className="trust-item">
-            <span className="trust-dot">✓</span> Clean & Safe Stay Booking
-          </span>
+          <span className="trust-item">Trusted Local Assistance</span>
+          <span className="trust-item">Verified Vedic Pandits</span>
+          <span className="trust-item">Clean & Safe Stay Booking</span>
         </div>
       </div>
 

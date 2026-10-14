@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useScrollReveal } from './hooks/useScrollReveal';
 import AnnouncementBar from './components/AnnouncementBar';
 import Navbar from './components/Navbar';
@@ -24,6 +24,18 @@ const App = () => {
 
   // Initialize intersection observer for smooth scroll reveals
   useScrollReveal();
+
+  // Lock body scroll when modal or mobile drawer is open
+  useEffect(() => {
+    if (isModalOpen || isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isModalOpen, isMobileMenuOpen]);
 
   const handleOpenEnquiry = (serviceId?: string) => {
     setSelectedServiceId(serviceId);

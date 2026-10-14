@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { SITE_CONFIG } from '../config/siteConfig';
 
 interface MobileDrawerProps {
@@ -8,6 +8,17 @@ interface MobileDrawerProps {
 }
 
 const MobileDrawer: React.FC<MobileDrawerProps> = ({ isOpen, onClose, onOpenEnquiry }) => {
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        onClose();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, onClose]);
+
   if (!isOpen) return null;
 
   const handleLinkClick = (hash: string) => {

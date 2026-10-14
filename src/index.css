@@ -21,6 +21,16 @@
 
 html { scroll-behavior: smooth; }
 
+section[id],
+footer[id] {
+  scroll-margin-top: 84px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--saffron);
+  outline-offset: 3px;
+}
+
 body {
   font-family: 'Jost', sans-serif;
   background: var(--warm-white);
@@ -200,7 +210,6 @@ body {
   text-transform: uppercase;
   margin-bottom: 24px;
 }
-.hero-badge::before { content: '◆'; font-size: 0.5rem; }
 
 .hero h1 {
   font-family: 'Cormorant Garamond', serif;
@@ -1324,23 +1333,35 @@ body {
   background: rgba(201,168,76,0.08);
   border-radius: 4px;
 }
-.pooja-card-actions {
+.pooja-card-actions,
+.stay-card-actions {
   display: flex;
   gap: 8px;
+  align-items: stretch;
+}
+.pooja-card-actions .btn-primary,
+.stay-card-actions .btn-primary {
+  min-height: 46px;
+  display: inline-flex;
   align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
 }
 .btn-wa-icon {
   background: #25D366;
   color: #fff;
   text-decoration: none;
-  padding: 10px 14px;
+  padding: 0 16px;
+  min-height: 46px;
   border-radius: 4px;
-  font-size: 1rem;
+  font-size: 1.15rem;
   line-height: 1;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
   transition: all 0.2s;
+  box-sizing: border-box;
 }
 .btn-wa-icon:hover {
   background: #1eb857;
@@ -2344,8 +2365,30 @@ body {
     flex-direction: column;
     gap: 12px;
   }
+  .form-input {
+    font-size: 16px;
+  }
   .modal-box {
     padding: 24px 18px;
+  }
+
+  /* FAQ on Mobile */
+  .faq-question-btn {
+    padding: 14px 16px;
+  }
+  .faq-question-text {
+    font-size: 0.9rem;
+    padding-right: 12px;
+  }
+  .faq-answer-body {
+    padding: 0 16px 16px;
+    font-size: 0.84rem;
+  }
+
+  /* Section Scroll Margin on Mobile */
+  section[id],
+  footer[id] {
+    scroll-margin-top: 72px;
   }
 
   /* Footer on Mobile */
@@ -2472,5 +2515,19 @@ body {
   .floating-btn {
     padding: 9px 14px;
     font-size: 0.78rem;
+  }
+}
+
+/* ── Accessibility & Reduced Motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
   }
 }
