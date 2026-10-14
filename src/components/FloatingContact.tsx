@@ -8,17 +8,6 @@ interface FloatingContactProps {
 const FloatingContact: React.FC<FloatingContactProps> = ({ onOpenEnquiry }) => {
   return (
     <div className="floating-contact-container" aria-label="Quick contact buttons">
-      <button
-        type="button"
-        onClick={onOpenEnquiry}
-        className="floating-btn enquiry"
-        title="Quick Pilgrimage Enquiry"
-        aria-label="Open pilgrimage enquiry form"
-      >
-        <span className="floating-icon">📋</span>
-        <span className="floating-label">Enquiry</span>
-      </button>
-
       <a
         href={SITE_CONFIG.phoneHref}
         className="floating-btn phone"
@@ -40,6 +29,17 @@ const FloatingContact: React.FC<FloatingContactProps> = ({ onOpenEnquiry }) => {
         <span className="floating-icon">💬</span>
         <span className="floating-label">WhatsApp</span>
       </a>
+
+      <button
+        type="button"
+        onClick={onOpenEnquiry}
+        className="floating-btn enquiry"
+        title="Quick Pilgrimage Enquiry"
+        aria-label="Open pilgrimage enquiry form"
+      >
+        <span className="floating-icon">📋</span>
+        <span className="floating-label">Enquiry</span>
+      </button>
     </div>
   );
 };

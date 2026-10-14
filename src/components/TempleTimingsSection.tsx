@@ -86,7 +86,7 @@ const TempleTimingsSection: React.FC<TempleTimingsSectionProps> = ({ onOpenEnqui
               rel="noopener noreferrer"
               className="btn-primary w-full text-center"
             >
-              Request Puja Samagri via WhatsApp
+              <span>💬</span> Request Puja Samagri on WhatsApp
             </a>
           </div>
         </div>
